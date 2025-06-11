@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bratan GPT — AI для школьников</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #0f0f0f;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      color: #00ffaa;
+      margin: 0;
+    }
+    .container {
+      padding: 30px;
+    }
+    .btn {
+      background: #00ffaa;
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .chat-box {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .chat-box p {
+      margin: 10px 0;
+    }
+    .section {
+      margin-top: 40px;
+    }
+    .section h2 {
+      color: #00ffaa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bratan GPT — Твой AI-брат для учёбы и жизни</h1>
+  </header>
+
+  <div class="container">
+    <button class="btn" onclick="showFinanceTips()">📈 Советы по финансовой грамотности</button>
+
+    <div class="chat-box" id="chat">
+      <p><strong>Братан GPT:</strong> Йо, брат! Я с тобой. Готов помочь с учёбой, мотивацией и жизнью. Напиши, если что-то тревожит.</p>
+    </div>
+
+    <div class="section">
+      <h2>О проекте</h2>
+      <p>Этот сайт создан, чтобы помочь подросткам разобраться в теме ИИ, получить поддержку и советы от цифрового братана — Bratan GPT.</p>
+    </div>
+
+    <div class="section">
+      <h2>Учебные материалы</h2>
+      <ul>
+        <li>Что такое ИИ? Как он работает?</li>
+        <li>Введение в Python, Kaggle и машинное обучение</li>
+        <li>Как создать своего бота на AI</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function showFinanceTips() {
+      console.log("Кнопка нажата — отображаем советы.");
+      const chat = document.getElementById('chat');
+      const tips = [
+        "1. Откладывай хотя бы 10% от любых денег, что приходят.",
+        "2. Не трать сразу — подожди 24 часа перед крупной покупкой.",
+        "3. Веди учёт своих расходов, брат, даже в тетрадке.",
+        "4. Учись различать: нужное vs. желание.",
+        "5. Финансовая грамотность — это не про богатство, а про свободу."
+      ];
+      chat.innerHTML += '<p><strong>Братан GPT:</strong> Финансовая грамотность по-братски — слушай сюда:</p>';
+      tips.forEach(tip => {
+        chat.innerHTML += `<p>💡 ${tip}</p>`;
+      });
+    }
+  </script>
+</body>
+</html>
